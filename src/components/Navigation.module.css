@@ -1,0 +1,8 @@
+.navigationWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: midnightblue;
+    padding: 1%;
+    margin: 0 0 2% 0;
+}

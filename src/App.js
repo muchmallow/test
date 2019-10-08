@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Redirect, Route, Switch, withRouter} from "react-router-dom";
+import {compose} from "redux";
+import {connect} from "react-redux";
+import Cart from "./components/Cart";
+import Login from "./components/Login";
+import Market from "./components/Market";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = (props) => {
+    return (
+        <div>
+            <Switch>
+                <Redirect exact from={"/"} to={"/login"}/>
+                <Route path={"/login"} render={() => <Login/>}/>
+                <Route path={"/market"} render={() => <Market/>}/>
+                <Route path={"/cart"} render={() => <Cart/>}/>
+                <Route path={"*"} render={() => <div>404 PAGE NOT FOUND, sry</div>}/>
+            </Switch>
+        </div>
+    );
+};
 
-export default App;
+export default compose(
+    withRouter,
+    connect())(App);
