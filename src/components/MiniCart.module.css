@@ -1,0 +1,11 @@
+.miniCart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0 10% 0 0;
+}
+
+.miniCart img {
+    width: 15%;
+}

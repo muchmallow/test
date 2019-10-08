@@ -1,10 +1,11 @@
 import React from "react";
+import s from "./MiniCart.module.css";
 
-const MiniCart = () => {
+const MiniCart = ({itemsInCartNumber}) => {
     return (
-        <div>
-            <img src="https://img2.freepng.ru/20180703/sow/kisspng-computer-icons-shopping-cart-clip-art-5b3bb9fc3ccee7.8513327515306408922491.jpg" alt="goToCartIcon"/>
-            <span> товар(-ов)</span>
+        <div className={s.miniCart}>
+            <img src="https://img.icons8.com/windows/452/shopping-cart.png" alt="goToCartIcon"/>
+            <span>{itemsInCartNumber} товар(-ов)</span>
         </div>
     );
 };

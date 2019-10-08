@@ -2,7 +2,17 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    background-color: midnightblue;
+    background-color: slategrey;
     padding: 1%;
     margin: 0 0 2% 0;
+}
+
+.navigationWrapper a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navigationWrapper button {
+    margin: 1% 0 1% 0;
+    padding: 0 1% 0 1%;
 }

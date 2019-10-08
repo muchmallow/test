@@ -1,5 +1,5 @@
 const initialState = {
-    cartItems: []
+    cartItemsNumber: 0
 };
 
 const cartReducer = (state = initialState, action) => {
