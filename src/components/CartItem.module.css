@@ -1,0 +1,48 @@
+.cartItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imgContainer {
+    margin: 2% 0 2% 5%;
+}
+
+.imgContainer img {
+    max-height: 350px;
+}
+
+.titleContainer {
+    font-size: 120%;
+    font-weight: 500;
+}
+
+.buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 5% 0 0;
+    width: 10%;
+}
+
+.buttonsContainer button {
+    padding: 2% 5% 2% 5%;
+    border: none;
+    color: white;
+    background-color: darkgreen;
+    font-weight: 500;
+    font-size: 120%;
+}
+
+.buttonPay {
+    margin: 0 0 2% 0;
+}
+
+.buttonPay:hover {
+    background-color: green;
+}
+
+.buttonDelete:hover {
+    background-color: red;
+}

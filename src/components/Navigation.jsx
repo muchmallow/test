@@ -5,10 +5,15 @@ import {setIsAuthFalseAC} from "../reducers/loginReducer";
 import MiniCart from "./MiniCart";
 import {NavLink} from "react-router-dom";
 
-const Navigation = ({isAuth, setIsAuthFalseAC, itemsInCartNumber}) => {
+const Navigation = ({isAuth, setIsAuthFalseAC, cartItemsNumber}) => {
+    // console.log(products);
+    // let itemsInCart = products.map(p => {
+    //     return (p.addedToCart === true) ;
+    // });
+
     return (
         <div className={s.navigationWrapper}>
-            <NavLink to={"/cart"}><MiniCart itemsInCartNumber={itemsInCartNumber}/></NavLink>
+            <NavLink to={"/cart"}><MiniCart cartItemsNumber={cartItemsNumber}/></NavLink>
             {isAuth ? <button onClick={() => setIsAuthFalseAC()}>Log out</button> : <button>Log In</button>}
         </div>
     );
@@ -16,7 +21,8 @@ const Navigation = ({isAuth, setIsAuthFalseAC, itemsInCartNumber}) => {
 
 const mapStateToProps = (state) => {
     return {
-        isAuth: state.loginPage.isAuth
+        isAuth: state.loginPage.isAuth,
+        cartItemsNumber: state.marketPage.cartItemsNumber,
     };
 };
 

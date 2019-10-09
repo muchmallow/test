@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import Navigation from "./Navigation";
 import {compose} from "redux";
 import {connect} from "react-redux";
@@ -23,16 +23,9 @@ const Market = (props) => {
                                                       addedToCart={p.addedToCart}
                                                       addToCartAC={props.addToCartAC}/>);
 
-    let itemsInCart = props.products.map(p => {
-        if (p.addedToCart === true) {
-            return p;
-        }
-        return p;
-    });
-
     return (
         <div className={s.marketContainer}>
-            <Navigation itemsInCartNumber={itemsInCart.length}/>
+            <Navigation />
             <h1 className={s.title}>MARKET</h1>
             <div className={s.productsList}>
                 {products}

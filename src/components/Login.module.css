@@ -1,0 +1,47 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.login h1 {
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.renderField {
+    display: flex;
+    flex-direction: column;
+    margin: 2% 0 2% 0;
+}
+
+.input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.input input {
+    position: relative;
+    left: +4%;
+}
+
+.label {
+    font-size: 120%;
+    font-weight: 500;
+}
+
+.error {
+    font-size: 110%;
+    font-weight: 500;
+    color: red;
+}
+
+.submit {
+    width: 105%;
+}

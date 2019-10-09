@@ -23,8 +23,14 @@
     margin: 0 0 0 5%;
 }
 
-.imgWrapper img{
+.imgWrapper img {
     max-height: 400px;
+}
+
+.imgWrapper p {
+    text-align: center;
+    font-weight: 500;
+    margin: 1% 0;
 }
 
 .description {
@@ -37,6 +43,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+
+.buy a {
+    text-decoration: none;
 }
 
 .price {

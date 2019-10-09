@@ -1,15 +1,15 @@
 import React from 'react';
+import s from "./Login.module.css";
 
 const renderField = ({input, label, placeholder, type, meta: {touched, error}}) => {
     const hasError = touched && error;
     return (
-        <div>
-            <div>
-                <label>{label}</label>
+        <div className={s.renderField}>
+            <div className={s.input}>
+                <label className={s.label}>{label}</label>
                 <input {...input} placeholder={placeholder} type={type}/>
-                {console.log(touched)}
             </div>
-            {hasError && <span>{error}</span>}
+            {hasError && <span className={s.error}>{error}</span>}
         </div>
     );
 };

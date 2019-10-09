@@ -32,7 +32,7 @@ const LoginForm = ({handleSubmit, valid}) => {
                    label={"Password"}
                    placeholder={"example: 1qwerty%"}
                    validate={[minLength, required, password]}/>
-            <button disabled={!valid} type={"submit"}>Submit</button>
+            <button className={s.submit} disabled={!valid} type={"submit"}>Submit</button>
         </form>
     );
 };
@@ -43,15 +43,17 @@ const ReduxLoginForm = reduxForm({
 
 const Login = ({loginTC, isAuth}) => {
     const onSubmit = (formData) => {
-        loginTC(formData.email, formData.password)
+        loginTC(formData.customerEmail, formData.customerPassword)
     };
     if (isAuth) {
         return <Redirect to={"/market"}/>
     }
     return (
-        <div>
+        <div className={s.login}>
             <h1>Login</h1>
-            <ReduxLoginForm onSubmit={onSubmit}/>
+            <div className={s.form}>
+                <ReduxLoginForm onSubmit={onSubmit}/>
+            </div>
         </div>
     );
 };

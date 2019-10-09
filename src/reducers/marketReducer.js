@@ -2,6 +2,7 @@ const ADD_TO_CART = "market/ADD_TO_CART";
 const REMOVE_FROM_CART = "market/REMOVE_FROM_CART";
 
 const initialState = {
+    cartItemsNumber: 0,
     products: [
         {
             id: 1,
@@ -66,7 +67,8 @@ const marketReducer = (state = initialState, action) => {
                         };
                     }
                     return p;
-                })
+                }),
+                cartItemsNumber: state.cartItemsNumber + 1
             }
         }
         case REMOVE_FROM_CART: {
@@ -80,7 +82,8 @@ const marketReducer = (state = initialState, action) => {
                         };
                     }
                     return p;
-                })
+                }),
+                cartItemsNumber: state.cartItemsNumber - 1
             }
         }
         default:
