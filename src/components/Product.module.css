@@ -61,6 +61,7 @@
     border: none;
     font-weight: 500;
     font-size: 120%;
+    transition: 0.25s;
 }
 
 .buyBtn:hover {

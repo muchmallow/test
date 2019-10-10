@@ -20,7 +20,7 @@ const Cart = ({isAuth, products, removeFromCartAC, history, cartItemsNumber}) =>
     });
 
     return (
-        <div>
+        <div className={s.cart}>
             <Navigation/>
             {(cartItemsNumber > 0) && <div>
                 {itemsInCart}

@@ -33,6 +33,7 @@
     background-color: darkgreen;
     font-weight: 500;
     font-size: 120%;
+    transition: 0.25s;
 }
 
 .buttonPay {
@@ -44,5 +45,5 @@
 }
 
 .buttonDelete:hover {
-    background-color: red;
+    background-color: firebrick;
 }

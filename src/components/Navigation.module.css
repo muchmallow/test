@@ -1,4 +1,6 @@
 .navigationWrapper {
+    position: sticky;
+    top: 0;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -13,6 +15,13 @@
 }
 
 .navigationWrapper button {
+    border: none;
     margin: 1% 0 1% 0;
     padding: 0 1% 0 1%;
+    transition: 0.25s;
+}
+
+.navigationWrapper button:hover {
+    background-color: firebrick;
+    color: white;
 }

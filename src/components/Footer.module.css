@@ -1,0 +1,15 @@
+.footerContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: slategrey;
+    margin: 10% 0 0 0;
+    position: static;
+    bottom: 0;
+}
+
+.copyright {
+    font-size: 90%;
+    font-weight: 500;
+}

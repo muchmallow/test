@@ -6,6 +6,7 @@ import {withRouter} from "react-router-dom";
 import Product from "./Product";
 import {addToCartAC} from "../reducers/marketReducer";
 import s from "./Market.module.css";
+import Footer from "./Footer";
 
 const Market = (props) => {
     if (props.isAuth === false) {
@@ -30,6 +31,7 @@ const Market = (props) => {
             <div className={s.productsList}>
                 {products}
             </div>
+            <Footer/>
         </div>
     );
 };
