@@ -1,9 +1,9 @@
 import React from "react";
 import s from "./Login.module.css";
-import {reduxForm, Field} from "redux-form";
+import {reduxForm, Field, reset} from "redux-form";
 import renderField from "./Input";
 import {Redirect} from "react-router-dom";
-import {loginTC} from "../reducers/loginReducer";
+import {clearFormAC, loginTC} from "../reducers/loginReducer";
 import {connect} from "react-redux";
 
 const required = value  => (value ? undefined : "This field is required");
@@ -17,7 +17,7 @@ const minLength = value => (
     value && value.length < 8 ? "It should be eight characters or more" : undefined
 );
 
-const LoginForm = ({handleSubmit, valid}) => {
+const LoginForm = ({handleSubmit, valid, reset, pristine}) => {
     return (
         <form onSubmit={handleSubmit}>
             <Field name={"customerEmail"}
@@ -41,7 +41,8 @@ const ReduxLoginForm = reduxForm({
     form: "ReduxLoginForm"
 })(LoginForm);
 
-const Login = ({loginTC, isAuth}) => {
+const Login = ({clearFormAC, loginTC, isAuth}) => {
+    clearFormAC();
     const onSubmit = (formData) => {
         loginTC(formData.customerEmail, formData.customerPassword)
     };
@@ -62,4 +63,4 @@ const mapStateToProps = (state) => ({
     isAuth: state.loginPage.isAuth
 });
 
-export default connect(mapStateToProps, {loginTC})(Login);
+export default connect(mapStateToProps, {loginTC, clearFormAC})(Login);

@@ -1,11 +1,13 @@
 .login {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    align-items: center;
+    margin: 7% 0 0 0;
 }
 
 .login h1 {
     text-align: center;
+    margin: 0 0 5% 0;
 }
 
 .form {
@@ -29,6 +31,13 @@
 .input input {
     position: relative;
     left: +4%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+.input input:focus {
+    border-bottom: 2px solid slategrey;
 }
 
 .label {
@@ -44,4 +53,16 @@
 
 .submit {
     width: 105%;
+    height: 35px;
+    font-size: 110%;
+    border: none;
+}
+
+.submit:hover {
+    background-color: green;
+    color: white;
+}
+
+.submit:disabled {
+    opacity: 0.5;
 }

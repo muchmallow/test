@@ -9,15 +9,13 @@ import Market from "./components/Market";
 
 const App = (props) => {
     return (
-        <div>
-            <Switch>
-                <Redirect exact from={"/"} to={"/login"}/>
-                <Route path={"/login"} render={() => <Login/>}/>
-                <Route path={"/market"} render={() => <Market/>}/>
-                <Route path={"/cart"} render={() => <Cart/>}/>
-                <Route path={"*"} render={() => <div>404 PAGE NOT FOUND, sry</div>}/>
-            </Switch>
-        </div>
+        <Switch>
+            <Redirect exact from={"/"} to={"/login"}/>
+            <Route path={"/login"} render={() => <Login/>}/>
+            <Route path={"/market"} render={() => <Market/>}/>
+            <Route path={"/cart"} render={() => <Cart/>}/>
+            <Route path={"*"} render={() => <div>404 PAGE NOT FOUND, sry</div>}/>
+        </Switch>
     );
 };
 
